@@ -6,6 +6,75 @@ Sistema de gestión de tareas desarrollado con Django que permite a los usuarios
 
 Este proyecto forma parte del portafolio del Módulo 6 del Bootcamp Desarrollo Full Stack de Python, donde se implementan las funcionalidades fundamentales del framework Django para el desarrollo de aplicaciones web empresariales. El sistema permite a cada usuario gestionar sus propias tareas de forma privada, con un sistema completo de autenticación y autorización.
 
+## Problemática Resuelta
+
+En el contexto personal y profesional, la gestión efectiva de tareas es fundamental para la productividad. Sin embargo, muchas soluciones existentes son complejas, requieren suscripciones o no garantizan la privacidad de los datos del usuario.
+
+Este sistema resuelve:
+- **Gestión personal**: Cada usuario tiene su propio espacio privado de tareas
+- **Simplicidad**: Interfaz intuitiva sin funcionalidades innecesarias
+- **Seguridad**: Sistema de autenticación robusto con protección de datos
+- **Accesibilidad**: Aplicación web gratuita y de código abierto
+- **Privacidad**: Las tareas de cada usuario son completamente privadas
+
+## Enfoque de Desarrollo
+
+El proyecto siguió una metodología estructurada basada en los fundamentos de Django:
+
+### 1. Análisis de Requisitos
+- Identificación de necesidades básicas de gestión de tareas
+- Definición de requerimientos de autenticación y autorización
+- Planificación de modelo de datos simple pero efectivo
+
+### 2. Diseño de Arquitectura
+- Adopción del patrón MVT (Model-View-Template) de Django
+- Diseño de modelo Tarea con campos esenciales
+- Planificación de flujo de autenticación (registro, login, logout)
+
+### 3. Desarrollo por Capas
+
+**Capa de Datos:**
+- Implementación del modelo Tarea para el panel admin
+- Sistema de almacenamiento en memoria para demostración
+- Configuración de base de datos SQLite
+
+**Capa de Lógica:**
+- Desarrollo de vistas para operaciones CRUD
+- Implementación de sistema de autenticación con django.contrib.auth
+- Creación de decoradores @login_required para protección de rutas
+- Funciones auxiliares en utils.py
+
+**Capa de Presentación:**
+- Sistema de templates con herencia (base.html)
+- Formularios Django con validación integrada
+- Integración de Bootstrap para diseño responsivo
+- Feedback visual para acciones del usuario
+
+### 4. Implementación de Seguridad
+- Configuración de protección CSRF
+- Validación de formularios con Django Forms
+- Hash automático de contraseñas con PBKDF2
+- Control de acceso basado en usuario autenticado
+
+### 5. Testing y Refinamiento
+- Pruebas de funcionalidad de autenticación
+- Validación de operaciones CRUD
+- Verificación de aislamiento de datos entre usuarios
+- Testing de interfaz en diferentes navegadores
+
+### 6. Documentación
+- Creación de README detallado
+- Documentación de investigación en INVESTIGACION_DJANGO.md
+- Comentarios en código para mantenibilidad
+- Configuración de .gitignore para buenas prácticas
+
+### Buenas Prácticas Aplicadas
+- Separación de responsabilidades (MVT)
+- Código DRY con sistema de templates
+- Protección de rutas sensibles
+- Validación de datos en servidor
+- Control de versiones desde el inicio
+- Configuración preparada para producción
 ## Características Principales
 
 ### Funcionalidades Implementadas
